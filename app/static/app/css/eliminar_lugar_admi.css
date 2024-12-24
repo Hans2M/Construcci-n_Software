@@ -1,0 +1,85 @@
+ /* Estilo General */
+ 
+ body {
+     background: url('/static/app/gif/ciudad.gif') no-repeat center center fixed;
+     background-size: cover;
+     color: #fff;
+ }
+ 
+ .container {
+     margin-top: 10%;
+ }
+ 
+ .delete-container {
+     background: rgba(255, 255, 255, 0.95);
+     border-radius: 15px;
+     padding: 30px;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+     text-align: center;
+     animation: fadeIn 1s ease-in-out;
+ }
+ 
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+         transform: translateY(-10px);
+     }
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+ 
+ .delete-container h2 {
+     font-size: 2rem;
+     font-weight: bold;
+     color: #dc3545;
+ }
+ 
+ .delete-container p {
+     font-size: 1rem;
+     color: #495057;
+     margin-top: 15px;
+     margin-bottom: 30px;
+ }
+ 
+ .btn-danger,
+ .btn-secondary {
+     font-size: 1rem;
+     padding: 10px 20px;
+     margin-top: 10px;
+     border-radius: 8px;
+ }
+ 
+ .btn-danger:hover {
+     background-color: #bb2d3b;
+     transform: scale(1.05);
+ }
+ 
+ .btn-secondary:hover {
+     background-color: #6c757d;
+     transform: scale(1.05);
+ }
+ /* Modal Personalizado */
+ 
+ .modal-content {
+     border-radius: 15px;
+ }
+ 
+ .modal-header {
+     background-color: #dc3545;
+     color: #fff;
+     border-radius: 15px 15px 0 0;
+ }
+ 
+ .modal-footer .btn {
+     border-radius: 8px;
+ }
+ 
+ .modal-footer .btn-danger {
+     background-color: #dc3545;
+ }
+ 
+ .modal-footer .btn-danger:hover {
+     background-color: #bb2d3b;
+ }

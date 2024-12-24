@@ -1,0 +1,55 @@
+body {
+    background: url('/static/app/gif/tranquilidad.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    /* Texto blanco */
+    min-height: 100vh;
+    /* Altura mínima para pantallas pequeñas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 50px auto;
+    /* Espaciado superior e inferior */
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Fondo oscuro semitransparente */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+table {
+    background-color: rgba(30, 30, 30, 0.9);
+    /* Fondo oscuro para la tabla */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Evitar que los bordes salgan de la tabla */
+}
+
+th {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+td,
+th {
+    vertical-align: middle;
+    text-align: center;
+    /* Centrado vertical y horizontal */
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Resaltar filas al pasar el ratón */
+}

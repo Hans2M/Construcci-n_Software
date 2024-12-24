@@ -1,0 +1,216 @@
+body {
+    background: url('/static/app/gif/ciudad.gif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-dynamic {
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-add {
+    background: linear-gradient(135deg, #6c5ce7, #74b9ff);
+    color: #fff;
+}
+
+.btn-add:hover {
+    background: linear-gradient(135deg, #74b9ff, #6c5ce7);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-search {
+    background: linear-gradient(135deg, #00cec9, #00b894);
+    color: #fff;
+}
+
+.btn-search:hover {
+    background: linear-gradient(135deg, #00b894, #00cec9);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-back {
+    background: linear-gradient(135deg, #e84393, #ff7675);
+    color: #fff;
+}
+
+.btn-back:hover {
+    background: linear-gradient(135deg, #ff7675, #e84393);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.place-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #2d3436;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.place-card h5 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0984e3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.place-card p {
+    margin: 10px 0;
+    color: #2d3436;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.place-card strong {
+    font-weight: bold;
+    color: #0984e3;
+}
+
+.suggestions {
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    margin: 0;
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.suggestions li:hover {
+    background: #0984e3;
+    color: #ffffff;
+}
+
+h1 span {
+    display: block;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+
+/* Tarjeta de Lugar */
+
+.place-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.place-card:hover {
+    transform: scale(1.03);
+}
+
+.place-card h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+
+/* Información alineada */
+
+.place-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.place-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.place-info p strong {
+    color: #1e90ff;
+}
+
+
+/* Botón del Mapa */
+
+.map-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.map-button {
+    background: linear-gradient(45deg, #1e90ff, #00bfff);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.6);
+}
+
+.map-button:hover {
+    background: linear-gradient(45deg, #00bfff, #1e90ff);
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+    }
+}

@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="{% static 'app/css/contact.css' %}">
+    <script>
+        (function() {
+            emailjs.init("DqWirZdAEqDqmbsH2"); // Reemplaza con tu EmailJS Public Key
+        })();
+    </script>
+    
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left GIF -->
+        <div class="gif-container">
+            <img src="{% static 'app/gif/minion_2.gif' %}" alt="Left GIF">
+        </div>
+        
+        <!-- Form -->
+        <div class="form-container">
+            <h2>Contáctanos</h2>
+            <form id="contact-form">
+                <!-- Hidden Contact Number -->
+                <input type="hidden" name="contact_number" value="697483">
+                
+                <!-- Name -->
+                <label for="user_name">Nombre</label>
+                <input type="text" id="user_name" name="user_name" placeholder="Ingresa tu nombre" required>
+                
+                <!-- Address -->
+                <label for="user_address">Dirección</label>
+                <input type="text" id="user_address" name="user_address" placeholder="Ingresa tu dirección" required>
+                
+                <!-- Email -->
+                <label for="user_email">Email</label>
+                <input type="email" id="user_email" name="user_email" placeholder="Ingresa tu correo" required>
+                
+                <!-- Phone -->
+                <label for="user_phone">Teléfono</label>
+                <input type="tel" id="user_phone" name="user_phone" placeholder="Ingresa tu teléfono" required>
+                
+                <!-- Subject -->
+                <label for="user_subject">Asunto</label>
+                <input type="text" id="user_subject" name="user_subject" placeholder="Escribe el asunto" required>
+                
+                <!-- Message -->
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
+                
+                <!-- Submit Button -->
+                <input type="submit" value="Enviar">
+            </form>
+            <!-- Back Button -->
+            <button class="back-button" id="back-button" onclick="goBack()">Regresar</button>
+        </div>
+
+        <!-- Right GIF -->
+        <div class="gif-container">
+            <img src="{% static 'app/gif/minion_2.gif' %}" alt="Right GIF">
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="background-music" autoplay loop>
+        <source src="{% static 'app/music/fondo_4.mp3' %}" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        const backButton = document.getElementById('back-button');
+        
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Sending form data through EmailJS
+            emailjs.sendForm('service_lkc69pi', 'template_lia3lvd', this)
+                .then(function() {
+                    alert('¡Listo! Mensaje enviado exitosamente 😊.');
+                    backButton.style.display = 'block'; // Show back button after success
+                }, function(error) {
+                    alert('Error al enviar mensaje. Inténtalo de nuevo 😔.');
+                    console.error('EmailJS Error:', error);
+                });
+        });
+
+        function goBack() {
+            window.location.href = '/'; // Replace with your desired redirect URL
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

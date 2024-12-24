@@ -1,0 +1,124 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #004080, #007bff);
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff !important;
+    font-size: 2rem;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #28a745;
+    /* Verde al pasar el mouse */
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(40, 167, 69, 0.5);
+}
+
+.btn-outline-success {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: #28a745;
+    /* Fondo verde */
+    color: #ffffff;
+    /* Texto blanco */
+    border: none;
+    /* Sin borde */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.4);
+}
+
+.btn-outline-success:hover {
+    background-color: #218838;
+    /* Verde más oscuro */
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.7);
+}
+
+.form-control {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    color: #121212;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 6px 10px rgba(0, 123, 255, 0.5);
+    transform: scale(1.02);
+}
+
+.highlight-bar {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    height: 5px;
+}
+
+iframe {
+    margin-top: 5px;
+    border: none;
+    width: 100%;
+    height: calc(100vh - 66px - 5px);
+}
+
+.result-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.result-item {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    border: 1px solid #333;
+    width: calc(33.33% - 10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+.result-item h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.result-item p {
+    margin-bottom: 5px;
+}
+
+.result-item .btn {
+    margin-top: 10px;
+    width: 100%;
+}

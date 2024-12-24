@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'app/css/home.css' %}">   
+    <script>
+        function confirmarCierreSesion(event, logoutUrl) {
+            event.preventDefault();
+            const confirmLogout = confirm("¿Estás seguro de que deseas cerrar sesión?");
+            if (confirmLogout) {
+                window.location.href = logoutUrl;
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    {% if request.user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="btn btn-primary text-white" href="#">Bienvenido, {{ request.user.username }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="{% url 'eventos' %}">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-contact" href="{%url 'contacto' %}">Contáctanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-danger" href="#" onclick="confirmarCierreSesion(event, '{% url 'inicio' %}')">Cerrar Sesión</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="btn btn-warning text-white" href="{% url 'register' %}">Registrarse</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>Mente Clara, Vida Clara</h1>
+        <p>Descubre como gestionar tus actividades</p>
+        <a href="{%url 'eventos'%}" class="btn btn-success">Ver Lugares</a>
+    </div>
+
+    <!-- Mensaje de Bienvenida -->
+    <div class="welcome-message">
+        <span>🎉</span> ¡Te damos la bienvenida, navega sin limites ! <span>😊</span>
+    </div>
+
+    <!-- Música de fondo -->
+    <audio id="background-music" autoplay loop>
+        <source src="{% static 'app/music/fondo_3.mp3' %}" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body> 
+</html>
+
+
+
+
+
